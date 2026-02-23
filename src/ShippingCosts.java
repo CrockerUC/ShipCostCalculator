@@ -17,7 +17,7 @@ public class ShippingCosts
         {
             itemPrice = in.nextDouble();
             in.nextLine();
-            shippingCost = itemPrice >= FREE_SHIPPING_THRESHOLD ? SHIP_RATE * itemPrice : 0;
+            shippingCost = itemPrice < FREE_SHIPPING_THRESHOLD ? SHIP_RATE * itemPrice : 0;
             totalCost = itemPrice + shippingCost;
             System.out.println("The item price is $" + itemPrice);
             System.out.println("The total cost is $" + totalCost);
